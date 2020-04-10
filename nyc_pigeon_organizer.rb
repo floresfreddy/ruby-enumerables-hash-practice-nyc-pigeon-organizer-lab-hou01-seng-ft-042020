@@ -7,8 +7,8 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute_type, attributes|
     attributes.each do |attribute_value, pigeon_names|
       pigeon_names.each do |name|
-        pigeon_list[name] ||= {}
-        pigeon_list[name][attribute_type] ||= []
+        pigeon_list[name] = {}
+        pigeon_list[name][attribute_type] = []
         pigeon_list[name][attribute_type].push(attribute_value.to_s)
       end
     end 
