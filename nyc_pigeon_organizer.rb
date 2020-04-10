@@ -7,6 +7,8 @@ def nyc_pigeon_organizer(data)
         new_pigeon[name] = {}
         new_pigeon[name][attribute_type] = []
         new_pigeon[name][attribute_type].push(attribute_value.to_s)
-      
-    
+      end
+    end
+  end
+  new_pigeon
 end
