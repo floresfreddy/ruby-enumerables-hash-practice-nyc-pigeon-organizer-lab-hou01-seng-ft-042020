@@ -1,4 +1,4 @@
-require 'pry'
+
 
 def nyc_pigeon_organizer(data)
   # write your code here!
@@ -7,9 +7,8 @@ def nyc_pigeon_organizer(data)
   data.each do |attribute_type, attribute|
     attribute.each do |attribute_value, pigeon_name|
       pigeon_name.each do |name|
-        new_pigeon[name] ||= {}
+        new_pigeon[name] = {}
         new_pigeon[name][attribute_type] = []
-        binding.pry
         new_pigeon[name][attribute_type].push(attribute_value.to_s)
       end
     end
